@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         pathname: "/media/currencies/**",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.countryflags.com",
+        port: "",
+        pathname: "/thumbs/**",
+      },
     ],
   },
 };

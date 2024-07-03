@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import type { Rate } from "@/components/List";
+import type { Rate } from "@/types";
 
 export default function Card({
   ticker,
