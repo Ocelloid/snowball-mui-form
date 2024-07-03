@@ -27,7 +27,11 @@ export default function Home({
         <Typography
           variant="h4"
           component="h1"
-          sx={{ mb: 2, fontWeight: "bold" }}
+          sx={{
+            mb: 2,
+            fontWeight: "bold",
+            fontSize: { xs: "1.75rem", sm: "2.125rem" },
+          }}
         >
           Курс валют на сегодня
         </Typography>

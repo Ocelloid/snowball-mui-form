@@ -41,7 +41,11 @@ export default function Search() {
       {!currencies.length && (
         <Skeleton
           variant="text"
-          sx={{ fontSize: "4rem", width: "100%", my: -2.5 }}
+          sx={{
+            fontSize: "4rem",
+            width: { xs: "240px", sm: "360px" },
+            my: -2.5,
+          }}
         />
       )}
       {!!currencies.length && (
@@ -91,7 +95,10 @@ export default function Search() {
             handleSearch(v.map((currency) => currency.ticker).join(","))
           }
           noOptionsText={"Нет валют"}
-          sx={{ minWidth: 360 }}
+          sx={{
+            minWidth: { xs: "240px", sm: "360px" },
+            maxWidth: { xs: "320px", sm: "unset" },
+          }}
           renderInput={(params) => (
             <TextField {...params} placeholder="Выберите валюты" />
           )}

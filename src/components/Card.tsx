@@ -22,7 +22,8 @@ export default function Card({
         gap: 1,
         p: 2.5,
         border: "1px solid #E3E5E5",
-        minWidth: 300,
+        minWidth: { xs: "240px", sm: "300px" },
+        maxWidth: { xs: "320px", sm: "unset" },
         borderRadius: 2,
       }}
     >
