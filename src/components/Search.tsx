@@ -37,13 +37,13 @@ export default function Search() {
   }, []);
 
   return (
-    <Box sx={{ display: "flex", minWidth: "400px" }}>
+    <Box sx={{ display: "flex", minWidth: { xs: "100%", sm: "400px" } }}>
       {!currencies.length && (
         <Skeleton
           variant="text"
           sx={{
             fontSize: "4rem",
-            width: { xs: "240px", sm: "360px" },
+            width: { xs: "100%", sm: "360px" },
             my: -2.5,
           }}
         />
@@ -91,13 +91,16 @@ export default function Search() {
               ?.toLowerCase()
               .includes(currency.ticker.toLowerCase())
           )}
+          isOptionEqualToValue={(option, value) =>
+            option.ticker === value.ticker
+          }
           onChange={(_e, v) =>
             handleSearch(v.map((currency) => currency.ticker).join(","))
           }
           noOptionsText={"Нет валют"}
           sx={{
-            minWidth: { xs: "240px", sm: "360px" },
-            maxWidth: { xs: "320px", sm: "unset" },
+            minWidth: { xs: "100%", sm: "560px" },
+            maxWidth: { xs: "100%", sm: "unset" },
           }}
           renderInput={(params) => (
             <TextField {...params} placeholder="Выберите валюты" />
