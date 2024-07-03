@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "snowball-income.com",
+        hostname: "snowball-analytics.com",
         port: "",
         pathname: "/media/currencies/**",
       },
