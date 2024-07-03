@@ -14,10 +14,10 @@ export default function Home({
 }) {
   const query = searchParams?.query || "";
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="lg">
       <Box
         sx={{
-          m: 8,
+          my: 8,
           display: "flex",
           flexDirection: "column",
           alignItems: "start",

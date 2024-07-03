@@ -91,7 +91,7 @@ export default function Search() {
             handleSearch(v.map((currency) => currency.ticker).join(","))
           }
           noOptionsText={"Нет валют"}
-          sx={{ minWidth: 400 }}
+          sx={{ minWidth: 360 }}
           renderInput={(params) => (
             <TextField {...params} placeholder="Выберите валюты" />
           )}
