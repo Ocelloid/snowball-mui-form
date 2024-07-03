@@ -17,7 +17,7 @@ export default function Home({
     <Container maxWidth="lg">
       <Box
         sx={{
-          my: 8,
+          my: { xs: 2, sm: 4, md: 8 },
           display: "flex",
           flexDirection: "column",
           alignItems: "start",
