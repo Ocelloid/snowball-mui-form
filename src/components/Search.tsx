@@ -85,7 +85,7 @@ export default function Search() {
               </li>
             );
           }}
-          defaultValue={currencies.filter((currency) =>
+          value={currencies.filter((currency) =>
             searchParams
               .get("query")
               ?.toLowerCase()
