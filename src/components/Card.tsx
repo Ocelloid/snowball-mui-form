@@ -22,8 +22,8 @@ export default function Card({
         gap: 1,
         p: 2.5,
         border: "1px solid #E3E5E5",
-        minWidth: { xs: "240px", sm: "300px" },
-        maxWidth: { xs: "320px", sm: "unset" },
+        minWidth: { xs: "100%", sm: "300px" },
+        maxWidth: { xs: "100%", sm: "unset" },
         borderRadius: 2,
       }}
     >
@@ -38,7 +38,17 @@ export default function Card({
       >
         <Image src={logoURL} alt="logo" width={40} height={40} />
       </Box>
-      <Typography variant="h6" component="h2" sx={{ fontWeight: "bold" }}>
+      <Typography
+        variant="h6"
+        component="h2"
+        sx={{
+          fontWeight: "bold",
+          maxWidth: { xs: "100%", sm: "258px" },
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+        }}
+      >
         {ticker}&nbsp;-&nbsp;{description}
       </Typography>
       {!!rate && (
@@ -56,7 +66,9 @@ export default function Card({
           <Typography
             variant="h6"
             component="h1"
-            sx={{ color: rate.dayGainPercent > 0 ? "#31BD7A" : "#FF5247" }}
+            sx={{
+              color: rate.dayGainPercent > 0 ? "#31BD7A" : "#FF5247",
+            }}
           >
             {rate.dayGainPercent > 0 ? "+" : ""}
             {rate.dayGainPercent.toFixed(2)}%
